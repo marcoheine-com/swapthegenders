@@ -77,47 +77,74 @@ function App() {
 
   return (
     <ui.Main>
-      <h1>Swap the genders</h1>
-      <p>
-        This little web app is a small tool to{' '}
-        <strong>change the gender</strong> in any text you give it.
-      </p>
+      <ui.Content>
+        <ui.Header>
+          <ui.Headline>Swap the genders</ui.Headline>
+          <p>
+            This little web app is a small tool to{' '}
+            <strong>change the gender</strong> in any text you give it.
+          </p>
+        </ui.Header>
 
-      <ui.Form>
-        <ui.Label htmlFor='inputtext'>
-          Insert the text you want to swap the genders for here:
-        </ui.Label>
-        <ui.Textarea
-          id='inputtext'
-          onChange={(e) => handleOnInputChange(e)}
-          value={inputText}
-        />
+        <ui.Form>
+          <ui.Fieldset>
+            <ui.Label htmlFor='inputtext'>1. Insert your text here:</ui.Label>
+            <ui.Textarea
+              id='inputtext'
+              onChange={(e) => handleOnInputChange(e)}
+              value={inputText}
+            />
+          </ui.Fieldset>
 
-        <ui.Button
-          type='button'
-          onClick={handleOnclick}
-          disabled={inputText === ''}
-        >
-          Swap
-        </ui.Button>
+          <ui.Button
+            type='button'
+            onClick={handleOnclick}
+            disabled={inputText === ''}
+          >
+            Swap
+          </ui.Button>
 
-        <ui.Label htmlFor='outputtext'>
-          Here is your gender swapped text:
-        </ui.Label>
-        <ui.Textarea id='outputtext' value={outputText} readOnly />
-      </ui.Form>
-      <p>
-        This idea is highliy inspired by Karrie Fransman's and Jonathan
-        Plackett's <strong>wonderful book:</strong>{' '}
-        <ui.Link href='http://www.karriefransman.com/project/gender-swapped-fairy-tales/'>
-          Gender Swapped Fairy Tales
-          <img
-            alt='book cover of gender swapped fairy tales'
-            src='http://books.google.com/books/content?id=7lBMzQEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70iLhMxyuK-k_m7YtXTsaxRK4ZWTcxWla_Vf9yfDP5YMpkswnNuPARHup366VvrqVTuT-6eW3vX9LBgBPDZ1Sp4C80EfCigobeYLgWcNA90wrBWBAwW-A1L4xcfjfgw1LBPKsbV&source=gbs_api'
-          />
-          Go buy it!
-        </ui.Link>
-      </p>
+          <ui.Fieldset>
+            <ui.Label htmlFor='outputtext'>
+              2. Here is your gender swapped text:
+            </ui.Label>
+            <ui.Textarea id='outputtext' value={outputText} readOnly />
+          </ui.Fieldset>
+        </ui.Form>
+
+        <ui.Paragraph>
+          This idea is highly inspired by Karrie Fransman's and Jonathan
+          Plackett's <strong>wonderful book:</strong>{' '}
+          <ui.Link
+            href='https://genderswappedstories.com/'
+            target='_blank'
+            rel='noopener noreferer'
+          >
+            Gender Swapped Fairy Tales
+            <img
+              alt='book cover of gender swapped fairy tales'
+              src='https://books.google.com/books/content?id=7lBMzQEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70iLhMxyuK-k_m7YtXTsaxRK4ZWTcxWla_Vf9yfDP5YMpkswnNuPARHup366VvrqVTuT-6eW3vX9LBgBPDZ1Sp4C80EfCigobeYLgWcNA90wrBWBAwW-A1L4xcfjfgw1LBPKsbV&source=gbs_api'
+            />
+            Go buy it!
+          </ui.Link>
+        </ui.Paragraph>
+      </ui.Content>
+
+      <ui.Footer>
+        <nav>
+          <ui.List>
+            <li>
+              <a href='https://marcokuehbauch.com/about'>Made by Marco</a>
+            </li>
+            <li>
+              <a href='https://github.com/mkuehb/swapthegenders'>GitHub</a>
+            </li>
+            <li>
+              <a href='https://twitter.com/Mkuehb'>Twitter</a>
+            </li>
+          </ui.List>
+        </nav>
+      </ui.Footer>
     </ui.Main>
   );
 }

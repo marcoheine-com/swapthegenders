@@ -134,13 +134,31 @@ function App() {
         <nav>
           <ui.List>
             <li>
-              <a href='https://marcokuehbauch.com/about'>Made by Marco</a>
+              <a
+                href='https://marcokuehbauch.com/about'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Made by Marco
+              </a>
             </li>
             <li>
-              <a href='https://github.com/mkuehb/swapthegenders'>GitHub</a>
+              <a
+                href='https://github.com/mkuehb/swapthegenders'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                GitHub
+              </a>
             </li>
             <li>
-              <a href='https://twitter.com/Mkuehb'>Twitter</a>
+              <a
+                href='https://twitter.com/Mkuehb'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Twitter
+              </a>
             </li>
           </ui.List>
         </nav>

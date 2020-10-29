@@ -5,9 +5,11 @@ const genderWords = [
   'he',
   'she',
   'mr.',
+  'mr',
   'mister',
   'miss',
   'mrs.',
+  'mrs',
   'her',
   'his',
   'man',
@@ -28,8 +30,10 @@ const genderOppositeLookupTable = {
   he: 'she',
   she: 'he',
   'mr.': 'mrs.',
+  mr: 'mrs',
   mister: 'miss',
   'mrs.': 'mr.',
+  mrs: 'mr',
   miss: 'mister',
   his: 'her',
   her: 'his',
@@ -91,6 +95,7 @@ function App() {
             <ui.Label htmlFor='inputtext'>1. Insert your text here:</ui.Label>
             <ui.Textarea
               id='inputtext'
+              placeholder='He is a man'
               onChange={(e) => handleOnInputChange(e)}
               value={inputText}
             />
@@ -108,7 +113,12 @@ function App() {
             <ui.Label htmlFor='outputtext'>
               2. Here is your gender swapped text:
             </ui.Label>
-            <ui.Textarea id='outputtext' value={outputText} readOnly />
+            <ui.Textarea
+              id='outputtext'
+              placeholder='She is a woman'
+              value={outputText}
+              readOnly
+            />
           </ui.Fieldset>
         </ui.Form>
 
